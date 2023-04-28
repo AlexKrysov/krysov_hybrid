@@ -9,7 +9,7 @@ import static io.qameta.allure.Allure.step;
 public class CheckPage {
 
     private SelenideElement
-            SCALABLE = $(".nav__link.platform__link"),
+            SCALABLE = $(".blk"),
             features = $(".block.video");
 
     public void checkScalable() {
@@ -19,7 +19,7 @@ public class CheckPage {
     }
     public void checkFeatures() {
         step("Проверка заголовка 'Features'", () -> {
-            SCALABLE.shouldHave(text("Other features"));
+            features.shouldHave(text("Other features"));
         });
     }
 }
