@@ -23,7 +23,7 @@ public class NavigationTests extends TestBase{
         navigationPage.clickPartners();
         checkPage.checkScalable();
     }
-    @DisplayName("Проверка наличия заголовка 'SCALABLE' в разделе 'partners'")
+    @DisplayName("Проверка наличия заголовка 'Features' в разделе 'partners'")
     @Owner("Krysov")
     @Tag("PositiveNavigationTest")
     @Test
