@@ -11,25 +11,16 @@ public class RandomData {
     public static Faker faker = new Faker();
 
     private SelenideElement
-            name = $("#inputName-1", 0),
-            email = $("#inputMail-1", 0),
-            phone = $("[name='phone_number']");
+            email = $("#email"),
+            password = $("#password");
 
 
     private String randomEmail = faker.internet().emailAddress();
-    private String randomName = faker.name().firstName();
-    private String randomPhone = faker.phoneNumber().phoneNumber();
+    private String randomPassword = faker.internet().password();
 
-
-    public void inputRandomName() {
-        step("Вводим рандомное имя", () -> {
-            name.setValue(randomName);
-        });
-    }
-
-    public void inputRandomPhone() {
-        step("Вводим рандомный номер телефона", () -> {
-            phone.setValue(randomPhone);
+    public void inputRandomPassword() {
+        step("Вводим рандомный пароль", () -> {
+            password.setValue(randomPassword);
         });
     }
 

@@ -10,6 +10,7 @@ public class CheckPage {
 
     private SelenideElement
             SCALABLE = $(".blk"),
+            password = $("#password-warning"),
             features = $(".block.video");
 
     public void checkScalable() {
@@ -17,9 +18,16 @@ public class CheckPage {
             SCALABLE.shouldHave(text("Scalable"));
         });
     }
+
     public void checkFeatures() {
         step("Проверка заголовка 'Features'", () -> {
             features.shouldHave(text("Other features"));
+        });
+    }
+
+    public void checkIncorrectEmailOrPassword() {
+        step("Проверка информационного сообщения 'Incorrect e-mail or password'", () -> {
+            password.shouldHave(text("Incorrect e-mail or password"));
         });
     }
 }

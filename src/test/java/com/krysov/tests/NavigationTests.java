@@ -1,15 +1,9 @@
 package com.krysov.tests;
 
-import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Owner;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 
 public class NavigationTests extends TestBase{
 

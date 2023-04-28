@@ -9,7 +9,9 @@ public class NavigationPage {
 
     private SelenideElement
             platform = $(".nav__link.platform__link"),
-            partners = $(".subitem__subtitle.platform__content-name",3);
+            signIn = $("#sign-up"),
+            partners = $(".subitem__subtitle.platform__content-name", 3),
+            iconLogin = $("#login");
 
 
     public void hoverPlatform() {
@@ -17,9 +19,20 @@ public class NavigationPage {
             platform.hover();
         });
     }
+
     public void clickPartners() {
         step("клик на 'partners'", () -> {
             partners.click();
+        });
+    }
+    public void clickIconLogin() {
+        step("клик на 'Login'", () -> {
+            iconLogin.click();
+        });
+    }
+    public void clickSignIn() {
+        step("клик на 'SignIn'", () -> {
+            signIn.click();
         });
     }
 
